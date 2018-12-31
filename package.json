@@ -60,8 +60,7 @@
   },
   "scripts": {
     "preinstall":"npm install -g @angular/cli",
-    "start": "npm-run-all --parallel open:client dev",
-    "start:debug": "npm-run-all --parallel open:client debug",
+    "start": "npm-run-all",
     "open:client": "ng serve --open",
     "build": "npm run build:prod",
     "build:dev": "ng build --deploy-url=dist",
