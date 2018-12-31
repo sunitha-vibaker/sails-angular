@@ -61,7 +61,7 @@
   },
   "scripts": {
     "preinstall": "npm install -g @angular/cli",
-    "start": "npm-run-all --parallel open:client dev",
+    "start": "npm-run-all --parallel open:client prod",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "ng serve --open",
     "build": "npm run build:prod",
@@ -69,7 +69,7 @@
     "build:prod": "ng build --prod --deploy-url=dist",
     "build:aot": "ng build --aot --deploy-url=dist",
    
-    "dev": "sails lift",
+    "prod": "sails lift",
     "debug": "node --inspect app.js"
   },
   "main": "app.js",
