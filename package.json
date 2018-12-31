@@ -68,10 +68,9 @@
     "build:dev": "ng build --deploy-url=dist",
     "build:prod": "ng build --prod --deploy-url=dist",
     "build:aot": "ng build --aot --deploy-url=dist",
-    "clean": "rimraf assets/dist",
+   
     "dev": "sails lift",
-    "debug": "node --inspect app.js",
-    "postinstall":"ng build --aot --prod"
+    "debug": "node --inspect app.js"
   },
   "main": "app.js",
   "repository": {
