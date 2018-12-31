@@ -61,7 +61,7 @@
   },
   "scripts": {
     "preinstall":"npm install -g @angular/cli",
-    "start": "npm-run-all --parallel open:client dev",
+    "start": "concurrently \"npm start\" \"sails lift\"",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "ng serve --open",
     "build": "npm run build:prod",
