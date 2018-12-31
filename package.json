@@ -5,12 +5,10 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
-    "@angular-devkit/build-angular": "~0.11.4",
     "@angular/animations": "~7.1.0",
     "@angular/cdk": "~7.2.0",
     "@angular/common": "~7.1.0",
     "@angular/compiler": "^7.1.4",
-    "@angular/compiler-cli": "~7.1.4",
     "@angular/core": "^7.1.4",
     "@angular/forms": "~7.1.0",
     "@angular/material": "^7.2.0",
@@ -20,10 +18,11 @@
     "@sailshq/connect-redis": "^3.2.1",
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
-    "concurrently": "~4.1.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "npm-run-all": "^4.1.5",
+    "@angular-devkit/build-angular": "~0.11.4",
+    "@angular/compiler-cli": "~7.1.4",
     "rxjs": "~6.3.3",
     "sails": "^1.1.0",
     "sails-hook-apianalytics": "^2.0.3",
@@ -46,7 +45,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
-    "grunt": "^1.0.3",
+    "grunt": "1.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
@@ -62,7 +61,7 @@
   },
   "scripts": {
     "preinstall": "npm install -g @angular/cli",
-    "start": "concurrently \"npm start\" \"sails lift\"",
+    "start": "npm-run-all --parallel open:client dev",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "ng serve --open",
     "build": "npm run build:prod",
@@ -71,7 +70,8 @@
     "build:aot": "ng build --aot --deploy-url=dist",
     "clean": "rimraf assets/dist",
     "dev": "sails lift",
-    "debug": "node --inspect app.js"
+    "debug": "node --inspect app.js",
+    "postinstall":"ng build --aot --prod"
   },
   "main": "app.js",
   "repository": {
