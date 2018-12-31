@@ -60,8 +60,9 @@
     "typescript": "~3.1.6"
   },
   "scripts": {
-    "preinstall":"npm install -g @angular/cli",
-    "start": "npm-run-all --parallel",
+    "preinstall":"npm install -g @angular/cli @angular/compiler-cli",
+    
+    "start": "npm-run-all --parallel open:client prod",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "ng serve --open",
     "build": "npm run build:prod",
