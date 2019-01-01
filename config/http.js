@@ -10,7 +10,9 @@
  */
 
 module.exports.http = {
-
+  customMiddleware: function(app) {
+    app.enable('trust proxy');
+  },
   /****************************************************************************
   *                                                                           *
   * Sails/Express middleware to run for every HTTP request.                   *
@@ -29,16 +31,16 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-     order: [
-      'cookieParser',
-       'session',
-      'bodyParser',
-      'compress',
+    // order: [
+    //   'cookieParser',
+    //   'session',
+    //   'bodyParser',
+    //   'compress',
     //   'poweredBy',
-       'router',
-       'www',
-       'favicon',
-     ],
+    //   'router',
+    //   'www',
+    //   'favicon',
+    // ],
 
 
     /***************************************************************************
@@ -49,11 +51,11 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    bodyParser: (function _configureBodyParser(){
-       var skipper = require('skipper');
-      var middlewareFn = skipper({ strict: true });
-      return middlewareFn;
-     })(),
+    // bodyParser: (function _configureBodyParser(){
+    //   var skipper = require('skipper');
+    //   var middlewareFn = skipper({ strict: true });
+    //   return middlewareFn;
+    // })(),
 
   },
 
