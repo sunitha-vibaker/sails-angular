@@ -3,7 +3,8 @@
     "modules": {}
   },
   "hooks" : {
-          "sockets" : false
+          "sockets" : false,
+          "session": false
     },
   "_generatedWith": {
     "sails": "1.1.0",

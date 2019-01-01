@@ -10,9 +10,7 @@
  */
 
 module.exports.http = {
-  customMiddleware: function(app) {
-    app.enable('trust proxy');
-  },
+ 
   /****************************************************************************
   *                                                                           *
   * Sails/Express middleware to run for every HTTP request.                   *
@@ -22,8 +20,8 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-  middleware: {
-
+  middleware: function(app) {
+    app.enable('trust proxy');
     /***************************************************************************
     *                                                                          *
     * The order in which middleware should be run for HTTP requests.           *
