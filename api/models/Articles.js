@@ -12,7 +12,7 @@ module.exports = {
       body:{type:'string'},
       id: { type: 'string', columnName: '_id' },
   },
-  datastore:'mongodb'
+  datastore:'productionMongo'
 
 };
 
