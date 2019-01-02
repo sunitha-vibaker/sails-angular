@@ -64,7 +64,7 @@
     "preinstall": "npm install -g @angular/cli",
     "start": "npm-run-all --parallel open:client prod",
     "start:debug": "npm-run-all --parallel open:client debug",
-    "open:client": "ng serve",
+    "open:client": "ng serve --port 8080",
     "build": "npm run build:prod",
     "build:dev": "ng build --deploy-url=dist",
     "build:prod": "ng build --prod --deploy-url=dist",
