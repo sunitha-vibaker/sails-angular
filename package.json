@@ -70,7 +70,8 @@
     "build:prod": "ng build --prod --deploy-url=dist",
     "build:aot": "ng build --aot --deploy-url=dist",
     "prod": "sails lift",
-    "debug": "node --inspect app.js"
+    "debug": "node --inspect app.js",
+    "heroku-postbuild": "webpack -p"
   },
   "main": "app.js",
   "repository": {
