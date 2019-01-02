@@ -372,7 +372,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://sails-angular-app.herokuapp.com',
+    baseUrl: 'https://sails-angular-app.herokuapp.com:8080',
     internalEmailAddress: 'support@example.com',
 
     // mailgunDomain: 'mg.example.com',

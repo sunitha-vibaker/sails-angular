@@ -7,7 +7,7 @@ import { Article } from './article';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "https://sails-angular-app.herokuapp.com/articles/list";
+const apiUrl = "/articles/list";
 
 @Injectable({
   providedIn: 'root'
