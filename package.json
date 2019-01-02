@@ -62,7 +62,8 @@
   },
   "scripts": {
     "preinstall": "npm install -g @angular/cli",
-    "start": "npm-run-all --parallel open:client prod",
+      
+    "start-prod": "npm-run-all --parallel open:client prod",
     "start:debug": "npm-run-all --parallel open:client debug",
     "open:client": "ng serve --port 8080",
     "build": "npm run build:prod",
