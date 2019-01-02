@@ -73,7 +73,7 @@
     "dev": "sails lift",
 
     "prod": "npm-run-all --parallel open:prd start",
-    "open:prd": "ng serve --port 3000",
+    "open:prd": "ng serve",
     "debug": "node --inspect app.js",
     "heroku-postbuild": "webpack -p"
   },
