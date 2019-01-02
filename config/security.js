@@ -28,11 +28,12 @@ module.exports.security = {
   *                                                                          *
   ***************************************************************************/
 
-  // cors: {
-  //   allRoutes: false,
-  //   allowOrigins: '*',
+   cors: {
+     allRoutes: true,
+     allowOrigins: '*',
+     origin: 'http://localhost:8080'
   //   allowCredentials: false,
-  // },
+   },
 
 
   /****************************************************************************
@@ -48,7 +49,17 @@ module.exports.security = {
   * https://sailsjs.com/docs/concepts/security/csrf                           *
   *                                                                           *
   ****************************************************************************/
+ origin: 'http://localhost:8080',
+ methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
 
+ /***************************************************************************
+ *                                                                          *
+ * Which headers should be allowed for CORS requests? This is only used in  *
+ * response to preflight requests.                                          *
+ *                                                                          *
+ ***************************************************************************/
+
+  headers: 'content-type, Authorization'
   // csrf: false
 
 };

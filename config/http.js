@@ -40,7 +40,16 @@ module.exports.http = {
     //   'favicon',
     // ],
 
-
+    order: [
+      'cookieParser',
+      'session',
+      'bodyParser',
+      'compress',
+      // 'poweredBy',
+      'router',
+      'www',
+      'favicon',
+     ]
     /***************************************************************************
     *                                                                          *
     * The body parser that will handle incoming multipart HTTP requests.       *

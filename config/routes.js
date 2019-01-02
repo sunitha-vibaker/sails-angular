@@ -23,37 +23,43 @@ module.exports.routes = {
   'get /articles/list':   {
     
     controller: 'ArticlesController',
-    action: 'list'
+    action: 'list',
+    skipAssets: true
    
 },
 'get /articles/add':   {
  
   controller: 'ArticlesController',
-  action: 'add'
+  action: 'add',
+  skipAssets: true
  
 },
 'post /articles/create':   {
  // view: 'articles/add',
   controller: 'ArticlesController',
-  action: 'create'
+  action: 'create',
+  skipAssets: true
  
 },
 'get /articles/edit/:id':   {
    
    controller: 'ArticlesController',
-   action: 'edit'
+   action: 'edit',
+   skipAssets: true
   
  },
  'post /articles/update/:id':   {
   //view: 'articles/edit',
   controller: 'ArticlesController',
-  action: 'update'
+  action: 'update',
+  skipAssets: true
  
 },
 'post /articles/delete/:id':   {
   //view: 'articles/edit',
   controller: 'ArticlesController',
-  action: 'delete'
+  action: 'delete',
+  skipAssets: true
  
 },
 
